@@ -1,0 +1,54 @@
+.font-clr{
+color: #313131;
+}
+.font-clr-wht{
+color: #FFFFFF;
+}
+.container-bg-solar
+{
+
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(63, 188, 219, 0.5),
+      rgba(63, 188, 219, 0.5)
+    ),
+    /* bottom, image */
+    url("../images/cmp10.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container-bg-uv
+{
+
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(63, 149, 160, 0.5),
+      rgba(63, 149, 160, 0.5)
+    ),
+    /* bottom, image */
+    url("../images/uv.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.container-bg-csd
+{
+
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(63, 188, 219, 0.5),
+      rgba(63, 188, 219, 0.5)
+    ),
+    /* bottom, image */
+    url("../images/csd.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.transpa
+{
+opacity: 0.8;
+}
+
+

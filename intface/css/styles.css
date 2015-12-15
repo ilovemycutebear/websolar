@@ -1,0 +1,629 @@
+/* =======================================================================
+Kane - Responsive App Landing Page 1.7
+======================================================================= */
+
+/* --------------------------------------
+=========================================
+GLOBAL STYLES
+=========================================
+-----------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: #ffffff;
+	font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #313131;
+    /*line-height: 28px;*/
+    text-align: center;
+    overflow-x: hidden !important;
+    margin: auto !important;
+}
+
+
+/* Internet Explorer 10 in Windows 8 and Windows Phone 8 Bug fix */
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+a {
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn:focus,
+.btn:active {
+    outline: inherit;
+}
+
+
+/* Other fixes*/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding-left: 0 !important;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* PRE LOADER */
+.preloader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.status
+{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    margin: -20px 0 0 -20px;
+}
+
+
+/*---------------------------------------
+   Typography                
+-----------------------------------------*/
+
+/* FONT FACE LOADER */
+@font-face
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face
+    {
+    	font-family: 'Lato', sans-serif;
+    	font-weight: 100;
+    	font-style: normal;
+    	font-size: 36px;
+    	line-height: 30px;
+    }
+}
+
+/* HEADINGS */
+
+h1,
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.688rem;
+}
+
+h2 {
+    font-size: 3.125rem;
+    line-height: 3.165rem;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h6
+{
+	font-size: 22px;
+	font-weight: 400;
+	color: silver;
+}
+
+/*---------------------------------------
+	VIDEO Block
+-----------------------------------------*/
+
+.fancybox-custom .fancybox-skin
+{
+	box-shadow: 0 0 50px #222;
+}
+
+/*---------------------------------------
+   CUSTOM BUTTON              
+-----------------------------------------*/
+
+.standard-button,
+.standard-button2 {
+    font-size: 18px;
+    font-weight: 400 !important;
+    border-radius: 4px !important;
+    text-shadow: 0 !important;
+    color: #ffffff;
+    min-width: 150px;
+    border: none;
+    padding: 16px 25px 16px 25px;
+    margin: 5px;
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+}
+
+.standard-button:hover,
+.standard-button2:hover {
+    border: none;
+}
+
+.standard-button i,
+.standard-button2 i {
+    vertical-align: inherit;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+
+/*---------------------------------------
+   TEXTS               
+-----------------------------------------*/
+
+.white-text {
+    color: #ffffff;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 46px;
+    line-height: 40px;
+}
+
+.dark-text {
+    color: #272727;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 46px;
+    line-height: 40px;
+}
+
+.dark-text-small {
+    color: #272727;
+    font-family: "Lato";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.dark-gray-bg
+{
+	background: #121a20 !important;
+}
+
+.grey-bg {
+    background: #F7F8FA !important;
+}
+
+
+/*---------------------------------------
+   SECTIONS          
+-----------------------------------------*/
+
+.section-header {
+    padding-bottom: 78px;
+}
+
+.section-header h2 {
+    margin-bottom: 20px;
+}
+
+.section-header .section-description p {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+	max-width: 880px;
+	font-size: 16px;
+}
+
+.section-header .section-description-white p {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+	max-width: 880px;
+	color: white;
+	font-size: 16px;
+}
+
+.section-header .section-buynow {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-family: "Lato";
+    font-weight: 100;
+    font-style: normal;
+    font-size: 16px;
+    padding: 10px;
+	max-width: 800px;
+}
+
+/*---------------------------------------
+=========================================
+ **   SECTION STYLES                
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   SECTION:  HOME                 
+-----------------------------------------*/
+
+header .solid-color {
+    min-height: 900px;
+}
+
+header .full-screen {
+    width: 100%;
+    height: 100px;
+}
+
+/* TOP BAR WITH NAVIGATION */
+
+.sticky-navigation {
+  min-height: 60px;
+  background: rgba(255, 255, 255, 0.98);
+  border: none;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+}
+
+.sticky-navigation .navbar-header img {
+  max-height: 30px;
+  -webkit-backface-visibility: hidden;
+}
+
+.sticky-navigation .main-navigation .current a {
+  color: #000000 !important;
+  position: relative;
+  outline: none;
+}
+
+.sticky-navigation .main-navigation li a {
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.sticky-navigation .main-navigation li a:hover {
+    color: #000000;
+}
+
+.navbar-inverse .navbar-toggle {
+border-color: #313131;
+background: #313131;
+}
+
+header .image-logo {
+    background: none;
+    padding: 60px 60px 20px;
+}
+
+/* INTRO */
+
+header .intro-section {
+    margin: auto;
+}
+
+header .intro-section .intro {
+    color: #ffffff;
+    margin-bottom: 36px;
+	line-height: 3.9rem;
+}
+
+header .intro-section h5 {
+    color: #ffffff;
+}
+
+header .intro-section .buttons {
+    margin-top: 35px;
+}
+
+.full-size-image img {
+	width: 100%;
+	padding: 0 20px 0 20px;
+}
+
+.right-image img {
+	width: 100%;
+	height: 100%;
+}
+
+/* Scroll down icon */
+
+@-webkit-keyframes scroll-down-anim {
+	0%{ bottom: 2px; }
+	50%{ bottom: 7px; }
+	100%{ bottom: 2px; }
+}
+@-moz-keyframes scroll-down-anim {
+	0%{ bottom: 2px; }
+	50%{ bottom: 7px; }
+	100%{ bottom: 2px; }
+}
+@-o-keyframes scroll-down-anim {
+	0%{ bottom: 2px; }
+	50%{ bottom: 7px; }
+	100%{ bottom: 2px; }
+}
+@keyframes scroll-down-anim {
+	0%{ bottom: 2px; }
+	50%{ bottom: 7px; }
+	100%{ bottom: 2px; }
+}
+
+.scroll-down {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	display:block;
+	margin:20px auto 10px;
+}
+
+.scroll-down-icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin-left: -20px;
+	position: absolute;
+	left: 50%;
+	color: #FFF;
+	font-size: 50px;
+
+	-webkit-animation: scroll-down-anim 1s infinite;
+	-moz-animation: scroll-down-anim 1s infinite;
+	-o-animation: scroll-down-anim 1s infinite;
+	animation: scroll-down-anim 1s infinite;
+}
+
+/*---------------------------------------
+   SECTION:  BRIEF                 
+-----------------------------------------*/
+
+.app {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.app h2 {
+    margin-bottom: 20px;
+}
+
+.app .phone-image img {
+    width: 100%;
+}
+
+.app .left-align {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.app .left-align p {
+    display: block;
+    float: none;
+    margin-top: 20px;
+}
+
+.app .left-align .feature-list {
+    margin-top: 20px;
+}
+
+.app .left-align .feature-list li {
+    margin-bottom: 10px;
+}
+
+.app .left-align .feature-list li i {
+    margin-right: 10px;
+    vertical-align: inherit;
+}
+
+/*---------------------------------------
+   SECTION:  box         
+-----------------------------------------*/
+
+.box {
+
+}
+
+.box .section-header {
+	padding-bottom: 10px;
+}
+
+.box2 {
+	padding-bottom: 0px;
+}
+
+/*---------------------------------------
+   SECTION:  FEATURES           
+-----------------------------------------*/
+
+.features {
+	background-color: #f7f8f9;
+	border-top: 1px solid #c7c7c7;
+}
+
+.features .single-service {
+    padding-bottom: 60px;
+}
+
+.features .single-service .service-icon {
+    font-size: 80px;
+}
+
+.features .single-service h3 {
+    margin-top: 20px;
+	color: gray;
+}
+
+.features h4
+{
+	font-size: 22px;
+	font-family: "Lato";
+	font-weight: 400;
+}
+
+.features p
+{
+	font-size: 15px;
+}
+
+/*---------------------------------------
+   SECTION:  DOWNLOAD                 
+-----------------------------------------*/
+
+.download {
+    color: #ffffff;
+}
+
+.download .solid-color {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.download .download-container {
+    padding-bottom: 10px;
+}
+
+.download h2 {
+    margin-bottom: 30px;
+}
+
+.download p {
+    margin-bottom: 5px;
+	font-size: 16px;
+}
+
+/* ==============================
+   Contact section
+   ============================== */
+.contact-item {
+	margin-top:24px;
+}
+
+.contact-item {
+	padding-left:16px;
+	text-align:left;
+}
+
+.contact-item.facebook,
+.contact-item.facebook a {
+	color: #3C5B96;
+}
+
+.contact-item i {
+	font-size:20px;
+}
+
+.contact-item.twitter,
+.contact-item.twitter a {
+	color: #59AEED;
+}
+
+.contact-item.mail,
+.contact-item.mail a {
+	color: #ED8129;
+}
+
+/*---------------------------------------
+   SECTION:  FOOTER                
+-----------------------------------------*/
+
+.support-and-feedback {
+	padding-top: 20px;
+}
+
+footer .section-header {
+	padding-bottom: 0px;
+}
+
+footer .social-icons {
+    margin-top: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 50px;
+}
+
+footer .social-icons li {
+    display: inline-block;
+    margin: 5px;
+}
+
+footer .social-icons li a {
+    font-size: 30px;
+    color: #c2c2c2;
+}
+
+footer .copyright {
+    color: #808080;
+	margin-bottom: 50px;
+	margin-top: 30px;
+}

@@ -1,0 +1,87 @@
+/* --------------------------------------
+MAIN COLOR CODE: #66CBFF
+DEEP COLOR CODE: #616161
+----------------------------------------- */
+
+.solid-color
+{
+    background-image: url(../images/beegee.jpg); /*baguhin mo to ha */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.standard-button
+{
+    background: #616161;
+}
+
+.standard-button2
+{
+    background: #66CBFF;
+}
+
+.standard-button2:hover
+{
+    background: #616161;
+}
+
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open .dropdown-toggle.btn-primary
+{
+    background: #616161;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left
+{
+    background: #66CBFF;
+}
+
+.main-color
+{
+    color: #66CBFF;
+}
+
+.color-bg
+{
+	background: #66CBFF;
+	color: #FFFFFF;
+}
+
+.features .single-service .service-icon,
+.features .single-service h3
+{
+    color: #66CBFF;
+}
+
+.feature-list i
+{
+    color: #66CBFF;
+}
+
+footer .contact-button
+{
+    border: 2px solid #66CBFF;
+    color: #66CBFF;
+}
+
+footer .contact-button:hover
+{
+    background: #66CBFF;
+}
+
+footer .contact-box .expanded-contact-form .input-box:active,
+footer .contact-box .expanded-contact-form .textarea-box:active,
+footer .contact-box .expanded-contact-form .input-box:focus,
+footer .contact-box .expanded-contact-form .textarea-box:focus
+{
+    border: 1px solid #66CBFF;
+}
+
+footer .social-icons li a:hover
+{
+    color: #66CBFF;
+}
