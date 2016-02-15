@@ -167,6 +167,54 @@ function QueryProcessUv(){
                               });
     return false;
 }
+function QueryProcessAllUv(){
+                         var menusix=$("#menu6").val();                 
+                          var menutwo=$("#starts").val();
+                          var menuthree=$("#ends").val();
+
+                         
+                      var data = "Areaid="+menusix+"&action=go";
+                      console.log("data:"+data);
+                        $.ajax({
+                                type: "POST",
+                                dataType: "json",
+                                url: "./dataproc/getalluvdata.php", 
+                                data: data,
+                                success: function(datajson) {
+                                           $('#example').DataTable( {
+
+                                                dom: 'Bfrtip',
+                                                lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength',
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+
+        ],
+
+                                            data:datajson,
+                                               "columns": [
+                                                              { "data": "tblAreaID" },
+                                                              { "data": "slrDate" },
+                                                              { "data": "slrTime" },
+                                                              { "data": "AvgUv" },
+                                                              { "data": "MinUv" },
+                                                              { "data": "MaxUv" }
+                                                          ]
+                                           });  
+                                  $('#example').show();
+                                  console.log("ya!");
+                        //JSON CONVERSION END
+                                      
+                                                          }
+                              });
+    return false;
+}
 //query process sunshine
 function QueryProcessSunshine(){
                          var menuone=$("#menu1").val();                 
@@ -190,6 +238,53 @@ function QueryProcessSunshine(){
                                                               { "data": "slrDate" },
                                                               { "data": "slrTime" },
                                                               { "data": "AvgSunshine" }
+                                                          ]
+                                           });  
+                                  $('#sunshinetbl').show();
+                                  console.log("ya!");
+                        //JSON CONVERSION END
+                                      
+                                                          }
+                              });
+    return false;
+}
+function QueryProcessAllSunshine(){
+                         var menusix=$("#menu6").val();                 
+                          var menutwo=$("#starts").val();
+                          var menuthree=$("#ends").val();
+
+                         
+                      var data = "Areaid="+menusix+"&action=go";
+                      console.log("data:"+data);
+                        $.ajax({
+                                type: "POST",
+                                dataType: "json",
+                                url: "./dataproc/getallsunshinedata.php", 
+                                data: data,
+                                success: function(datajson) {
+                                           $('#sunshinetbl').DataTable( {
+
+                                                dom: 'Bfrtip',
+                                                lengthMenu: [
+            [ 10, 25, 50, -1 ],
+            [ '10 rows', '25 rows', '50 rows', 'Show all' ]
+        ],
+        buttons: [
+            'pageLength',
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5',
+
+        ],
+
+                                            data:datajson,
+                                               "columns": [
+                                                              { "data": "tblAreaID" },
+                                                              { "data": "slrDate" },
+                                                              { "data": "slrTime" },
+                                                              { "data": "AvgSunshine" }
+
                                                           ]
                                            });  
                                   $('#sunshinetbl').show();
@@ -658,18 +753,18 @@ function QueryProcessSunshine(){
           SunLoading();
           
           if(idntf=="1"){
-            console.log("solar");
+            console.log("solarall");
             QueryProcessAllSolar();
             idntf="";
           }
-          else if(idntf=="2"){
-            console.log("uv");
-            QueryProcessUv();
+         if(idntf=="2"){
+            console.log("uvall");
+            QueryProcessAllUv();
             idntf="";
           }
-          else if(idntf=="3"){
-            console.log("sunshine");
-            QueryProcessSunshine();
+          if(idntf=="3"){
+            console.log("sunshineall");
+            QueryProcessAllSunshine();
             idntf="";
           }
       }
